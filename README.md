@@ -2,107 +2,16 @@
 
 ## 1. Introduction
 
-Welcome to the PARROT AI API! This API provides a robust set of endpoints for user authentication, account management, and user interactions, enabling developers to integrate XYZ features into their applications efficiently.
+Welcome to the PARROT AI API! This API provides a robust set of endpoints for account management, image generation and model interactions, enabling developers to integrate Parrot AI features into their applications efficiently.
 
-## 2. Config
+## 2. Getting Started
+To use the PARROT AI API, you need an API key. Please visit joinparrot.ai to register and obtain your key. Include this key in the HTTP Authorization header for all your API requests.
 
-- **Version**: 1.0
-- **Base URL**: `http://joinparrot.ai:8499/api/v1.0`
+## 3. API Document
+All details and usage instructions for the APIs are thoroughly documented in our Gitbook. To explore the capabilities of the Parrot AI API, please visit the following link: Parrot AI API Documentation.
 
-## 3. API
-
-### 3.1 User
-
-#### Register User
-
-- **Path**: `/rest/user/register`
-- **Method**: POST
-- **Body** (application/json): Includes `username`, `name`, `full_name`, `email`, `phone_number`, `avatar`, `metadata`, and `password`.
-- **Responses**:
-  - `200 OK` for success.
-  - `400 Validation Error` for invalid inputs.
-
-#### Logging In
-
-- **Endpoint**: `/rest/user/login`
-- **Method**: POST
-- **Authorization**: HTTPBasic
-- **Response**: Returns a token on successful authentication.
-
-#### Refresh Token
-
-- **Endpoint**: `/rest/user/refresh_token`
-- **Method**: POST
-- **Authorization**: OAuth2PasswordBearer
-- **Body**: `refresh_token=<your_refresh_token>`
-- **ContentType**: `application/x-www-form-urlencoded`
-
-#### User Profile
-
-- **POST**: `/rest/user/me`
-- **Authorization**: OAuth2PasswordBearer
-- **Responses**: `200 OK` on success.
-
-### 3.2 Task Management
-
-#### Create SD Task
-
-- **Path**: `/rest/task/create_sd_task`
-- **Authorization**: OAuth2PasswordBearer
-- **Body** (application/json): Requires `prompt` and `config` object.
-
-#### Create SDXL Task
-
-- **POST**: `/rest/task/create_sdxl_task`
-- **Authorization**: OAuth2PasswordBearer
-- **Body** (application/json): Requires `prompt` and `config` object.
-
-#### Get SD Task Result
-
-- **POST**: `/rest/task/get_result_sd_task`
-- **Authorization**: OAuth2PasswordBearer
-- **Body** (application/json): Requires `task_id`.
-
-#### Task History
-
-- **GET**: `/rest/task/get_task_history`
-- **Responses**: `200 OK` on success.
-
-#### Result Feedback
-
-- **POST**: `/rest/task/user_feedback`
-- **Authorization**: OAuth2PasswordBearer
-- **Body** (application/json): Requires `image_id`, optionally includes `is_like`, `is_dislike`, and `feedback`.
-
-## 4. Example Usage
-
-### Register User
-
-```bash
-curl -X POST http://joinparrot.ai:8499/api/v1.0/rest/user/register \
--H "Content-Type: application/json" \
--d '{
-  "username": "user",
-  "password": "pass",
-  "email": "user@example.com"
-}'
-```
-
-### Login User
-
-```bash
-curl -X POST http://joinparrot.ai:8499/api/v1.0/rest/user/login \
--H "Authorization: Basic <base64-encoded-credentials>"
-```
-
-### Refresh Token
-
-```bash
-curl -X POST http://joinparrot.ai:8499/api/v1.0/rest/user/refresh_token \
--H "Authorization: Bearer <your_access_token>" \
--H "Content-Type: application/x-www-form-urlencoded" \
--d "refresh_token=<your_refresh_token>"
-```
+## 4. Examples
+We have curated a collection of examples demonstrating the integration of the Parrot AI API. These examples cover a range of functionalities, from user management to the creation and retrieval of image generation tasks. You can find these examples in the "Examples" directory for reference and guidance.
 
 ## 5. Error Handling
 
