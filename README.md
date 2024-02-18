@@ -1,36 +1,56 @@
-# PARROT AI API Documentation
 
-## 1. Introduction
+## PARROT AI API Documentation
 
-Welcome to the PARROT AI API! This API provides a robust set of endpoints for account management, image generation and model interactions, enabling developers to integrate Parrot AI features into their applications efficiently.
+**Get Started Creating Stunning AI-Generated Images & Interactive Models Today!**
 
-## 2. Getting Started
-To use the PARROT AI API, you need an API key. Please visit joinparrot.ai to register and obtain your key. Include this key in the HTTP Authorization header for all your API requests.
+----------
 
-## 3. API Document
-All details and usage instructions for the APIs are thoroughly documented in our Gitbook. To explore the capabilities of the Parrot AI API, please visit the following link: Parrot AI API Documentation.
+**1. Introduction**
 
-## 4. Examples
-We have curated a collection of examples demonstrating the integration of the Parrot AI API. These examples cover a range of functionalities, from user management to the creation and retrieval of image generation tasks. You can find these examples in the "Examples" directory for reference and guidance.
+Welcome to the robust PARROT AI API! Seamlessly integrate powerful image generation and interactive models into your applications with our robust set of account management, image generation, and model interaction endpoints.
 
-## 5. Error Handling
+**2. Getting Started**
 
-The API uses standard HTTP response codes to indicate the success or failure of requests. In case of errors, a detailed message will be returned in the format:
+**Prerequisites:**
 
-```json
-{
-  "detail": [
-    {
-      "loc": ["body", "username"],
-      "msg": "field required",
-      "type": "value_error.missing"
-    }
-  ]
-}
+An Parrot AI account (register on our homepage:  [https://joinparrot.ai/](https://joinparrot.ai/)). The PARROT AI API is currently undergoing a private test run. We'll be in touch soon to onboard you to our network and give you a chance to try out our new features firsthand! Watch your inbox!
+
+**Installation:**
+
+Install our API wrapper via PIP:
+
+
+
+```
+pip install parrotai
+
 ```
 
-## Support
+**3. API Documentation**
 
-For further assistance or to report issues, please contact our support team at support@joinparrot.ai.
+Explore the full capabilities of the PARROT AI API in our developer document:  [https://developer.joinparrot.ai/](https://developer.joinparrot.ai/). Unlock your creativity and discover powerful use cases with our detailed examples in section 4.
 
-This README provides a concise overview of how to interact with the PARROT AI API. For a complete reference, including all endpoints and detailed request/response models, please refer to the full API documentation.
+**4. Examples**
+
+Unleash the potential of PARROT AI with our curated collection of examples covering user management, image generation, and more. Find them in the "Examples" directory for guidance and inspiration.
+
+**5. Resources**
+
+**Dive deeper into the PARROT AI experience:**
+
+-   [Homepage](https://joinparrot.ai/): Meet the team and join the community
+-   [Parrot-host](https://github.com/parrotnetwork/parrot-trainer): Join our network repository
+-   [Litepaper](https://litepaper.joinparrot.ai/): Understand our vision and philosophy
+-   [Developer site](https://developer.joinparrot.ai/): Interact seamlessly with the API
+-   Social Network:
+    
+    -   [Substack](https://parrotai.substack.com/): Explore our blog
+    -   [Twitter](https://twitter.com/joinparrotAI): Connect with us!
+    
+
+**6. Support**
+
+Need help? Contact our support team at support@joinparrot.ai for assistance or to report issues.
+
+**Explore the rich possibilities of the PARROT AI API and bring your creative vision to life!**
+
